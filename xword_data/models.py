@@ -31,15 +31,6 @@ class Entry(models.Model):
     )
 
 
-class Entry(models.Model):
-    class Meta(object):
-        db_table = 'entry'
-
-    entry_text = models.CharField(
-        'Entry Text', blank=False, null=False, unique=True, max_length=50
-    )
-
-
 class Clue(models.Model):
     class Meta(object):
         db_table = 'clue'

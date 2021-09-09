@@ -1,0 +1,27 @@
+{% extends "base.html" %} {% block content %} 
+<div class="drill">
+    <h1>Drill</h1>
+    <div class="clue">
+        <strong>Clue:</strong> name of red planet
+    </div>
+    <ul>
+        <li><strong>Answer Length:</strong>5</li>
+        <li><strong>Publisher:</strong>Yogi</li>
+        <li><strong>Byline:</strong>Abcdef</li>
+    </ul>
+    <form action="/" method="POST">
+        {% csrf_token %}
+        <input type="text" name="answer" placeholder="Enter Answer"/>
+        <input type="hidden" name="clue_id" value="red planet"/>
+        <input type="submit" value="CHECK" />
+
+    </form>
+    <a href="/">Escape Hatch</a>
+    {% if result == "not correct" %}
+    <div class="not-correct">The answer is not correct</div>
+    {% endif %}
+
+</div>  
+
+{% endblock %}
+    

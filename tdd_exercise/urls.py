@@ -19,5 +19,6 @@ from xword_data.views import drillView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', drillView, name="drill"),
+    path('', drillView, name="xword-drill"),
+
 ]
